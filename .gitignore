@@ -1,0 +1,28 @@
+# Python Bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Environment variables
+.env
+
+# IDE settings (PyCharm, VSCode, etc.)
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+
+# Logs and debug info
+*.log
+screenshots/
+
+# WebDriver cache
+.wdm/
+
+# Test outputs
+*.png
