@@ -1,14 +1,12 @@
 import os
 import time
 import logging
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException, WebDriverException
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from dotenv import load_dotenv
+from utils.driver_setup import get_driver, get_wait
 
 # Load environment variables from .env file
 load_dotenv()
@@ -22,11 +20,9 @@ logger = logging.getLogger(__name__)
 logger.info(f"Email loaded: {EMAIL}")
 logger.info(f"Password loaded: {'*' * len(PASSWORD) if PASSWORD else None}")
 
-# Setup Chrome
-options = webdriver.ChromeOptions()
-options.add_argument('--start-maximized')
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-wait = WebDriverWait(driver, 15)
+# Setup driver and wait
+driver = get_driver()
+wait = get_wait(driver)
 
 try:
     driver.get("https://www.hudl.com")
@@ -42,8 +38,7 @@ try:
 
     # Remove privacy overlays
     driver.execute_script(
-        'document.querySelectorAll("[aria-label=\'Privacy Preferences\'], .truste_overlay, .truste_popframe").forEach(e => e.remove());')
-
+        'document.querySelectorAll("[aria-label=\\\"Privacy Preferences\\\"], .truste_overlay, .truste_popframe").forEach(e => e.remove());')
 
     # Open login dropdown
     try:
@@ -98,23 +93,9 @@ try:
 except WebDriverException as e:
     logger.error(f"Unexpected WebDriver error: {e}")
 
-    # Wait for successful login by checking user dashboard
-    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "header, nav, .hui-globalheader")))
-    logger.info("Login successful!")
-
-    # Save screenshots after login
-    driver.save_screenshot(os.path.join(screenshot_dir, f"login_success_{timestamp}.png"))
-    driver.save_screenshot(os.path.join(screenshot_dir, f"user_dashboard_confirmed_{timestamp}.png"))
-
-except TimeoutException:
-    logger.error("Login form elements not found or login failed.")
-    driver.save_screenshot(os.path.join(screenshot_dir, f"login_failed_{timestamp}.png"))
-
-except WebDriverException as e:
-    logger.error(f"Unexpected WebDriver error: {e}")
-
 finally:
     driver.quit()
+
 
 
 

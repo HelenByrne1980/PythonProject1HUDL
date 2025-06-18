@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecf383ad-808f-43a3-906c-51738d3febb0" name="Changes" comment="Add Blank email test">
-      <change afterPath="$PROJECT_DIR$/utils/driver_setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlankEmailTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/InvalidEmailTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/InvalidPasswordTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_invalid_password.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_invalid_password.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_valid_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_valid_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/driver_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/driver_setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +44,9 @@
     "Python.InvalidPasswordTest.executor": "Run",
     "Python.main.executor": "Run",
     "Python.test_blank_email.executor": "Run",
+    "Python.test_invalid_email.executor": "Run",
+    "Python.test_invalid_password.executor": "Run",
+    "Python.test_valid_login.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -103,10 +104,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add Blank email test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonProject1HUDL$test_invalid_password.coverage" NAME="test_invalid_password Coverage Results" MODIFIED="1750235614983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/PythonProject1HUDL$main.coverage" NAME="main Coverage Results" MODIFIED="1750174986097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonProject1HUDL$BlankEmailTest.coverage" NAME="BlankEmailTest Coverage Results" MODIFIED="1750185204251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonProject1HUDL$InvalidPasswordTest.coverage" NAME="InvalidPasswordTest Coverage Results" MODIFIED="1750183832661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonProject1HUDL$test_blank_email.coverage" NAME="test_blank_email Coverage Results" MODIFIED="1750233887087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/PythonProject1HUDL$InvalidEmailTest.coverage" NAME="InvalidEmailTest Coverage Results" MODIFIED="1750183922389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonProject1HUDL$test_valid_login.coverage" NAME="test_valid_login Coverage Results" MODIFIED="1750235276126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/PythonProject1HUDL$test_invalid_email.coverage" NAME="test_invalid_email Coverage Results" MODIFIED="1750233962445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>
